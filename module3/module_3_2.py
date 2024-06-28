@@ -1,5 +1,5 @@
 def send_email(message, recipient, *, sender = "university.help@gmail.com"):
-    recipient_ok = False        # флаг корректности адреса получаетля
+    recipient_ok = False        # флаг корректности адреса получателя
     sender_ok = False           # флаг корректности адреса отправителя
 
     # проверка корректности адреса получателя
