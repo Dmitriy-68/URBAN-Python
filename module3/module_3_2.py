@@ -12,7 +12,7 @@ def send_email(message, recipient, *, sender = "university.help@gmail.com"):
     if sender[sender_dot:] in ['.com', '.ru', '.net'] and '@' in sender:
         sender_ok = True
 
-    if not (recipient_ok and sender_ok):    # если хотя один из адресов некорректен
+    if not (recipient_ok and sender_ok):    # если хоть один из адресов некорректен
         print('Невозможно отправить письмо с адреса', sender, 'на адрес', recipient + '.')
     elif sender == recipient:               # если адреса отправителя и получателя совпадают
         print('Нельзя отправить письмо самому себе!')
