@@ -1,14 +1,14 @@
 def calculate_structure_sum(a):
     global sum
     for i in range(len(a)):
-        if isinstance(a[i], dict):
+        if isinstance(a[i], dict):      # словари
             calculate_structure_sum(list(a[i].keys()))
             calculate_structure_sum(list(a[i].values()))
-        elif isinstance(a[i], set):
+        elif isinstance(a[i], set):     # множества
             calculate_structure_sum(list(a[i]))
-        elif isinstance(a[i], int | float):
+        elif isinstance(a[i], int | float):     # числа
             sum += a[i]
-        elif isinstance(a[i], str):
+        elif isinstance(a[i], str):     # строки
             sum += len(a[i])
         else:
             calculate_structure_sum(a[i])
