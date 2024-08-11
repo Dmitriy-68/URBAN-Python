@@ -7,7 +7,7 @@ score_2 = 42
 team1_time = 2015.2
 team2_time = 2153.31
 tasks_total = score_1 + score_2
-time_avg = round((team1_time + team2_time) / tasks_total, 2)
+time_avg = (team1_time + team2_time) / tasks_total
 
 print('В команде "%s" участников: %d !' % (team1_name, team1_num))
 print('Итого сегодня в командах участников: %d и %d !' % (team1_num, team2_num))
@@ -24,4 +24,4 @@ elif score_1 < score_2 or score_1 == score_2 and team1_time > team2_time:
 else:
     print('Ничья!')
 
-print(f'Сегодня было решено {tasks_total} задач, в среднем по {time_avg} секунды на задачу!')
+print(f'Сегодня было решено {tasks_total} задач, в среднем по {time_avg:.2f} секунды на задачу!')
